@@ -1,0 +1,31 @@
+﻿@model List<News>
+
+<h1 class="display-1 text-center">Noticias</h1>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Titulo</th>
+                <th>Descripción</th>
+                <th>Enlace</th>
+                <th>Fecha de modificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (News n in Model)
+            {
+            <tr>
+                <td>@n.Id</td>
+                <td>@n.Title</td>
+                <td>@n.Description</td>
+                <td>
+                    <a href="@n.Link">Enlace</a>
+                </td>
+                <td>@n.Date</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
